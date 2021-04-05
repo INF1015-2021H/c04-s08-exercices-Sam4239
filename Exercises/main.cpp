@@ -56,6 +56,9 @@ void runListExample() {
 int main() {
 	runListExample(); cout << "\n\n\n\n";
 
+	//vector<int> boo = { 1, 2, 3, 4 }
+
+
 	const List<int> foo = { 1, 2, 3 };
 	auto it = foo.begin();
 	cout << *it << "\n";
@@ -65,6 +68,14 @@ int main() {
 	cout << *it << "\n";
 	for (auto e : foo)
 		cout << e << " ";
+	cout << endl;
+	vector<int> boo = { 1, 2, 3, 4 };
+	for (int i = 0; i < boo.size(); ++i)
+		cout << boo[i] << " ";
+	cout << "\n";
+	for (int* it = &boo[0]; it != &boo[boo.size() - 1] + 1; ++it)
+		cout << *it << " ";
+	cout << endl;
 }
 
 
